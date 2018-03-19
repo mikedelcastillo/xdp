@@ -1,0 +1,26 @@
+$font-caslon: 'caslon', sans-serif
+$font-grotesk: 'grotesk', sans-serif
+$font-salted-mocha: 'salted-mocha', sans-serif
+
+$font-size: 16px
+$header-height: 4em
+
+$color-yellow: #FDBE2F
+$color-blue: #346CAF
+$color-red: #D00915
+
+@mixin range($from, $to: -1)
+  @if ($to == -1)
+    @media screen and (min-width: #{$from})
+      @content
+  @else
+    @media screen and (min-width: #{$from}) and (max-width: #{$to})
+      @content
+
+@mixin rangeh($from, $to: -1)
+  @if ($to == -1)
+    @media screen and (min-height: #{$from})
+      @content
+  @else
+    @media screen and (min-height: #{$from}) and (max-height: #{$to})
+      @content

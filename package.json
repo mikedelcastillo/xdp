@@ -1,0 +1,19 @@
+{
+  "name": "xdp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pug": "pug -w source/pug -o public",
+    "sass": "sass --watch source/sass/main.sass:public/css/main.css"
+  },
+  "author": "Mike del Castillo",
+  "license": "ISC",
+  "dependencies": {
+    
+  },
+  "devDependencies": {
+
+  }
+}

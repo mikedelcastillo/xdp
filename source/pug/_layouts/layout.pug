@@ -1,0 +1,52 @@
+mixin navigation(c = "default", selectedId = "", spacer = true)
+  - if(!c) c = "default";
+  #navigation-wrapper(class=c)
+    .navigation-links
+      -
+        const links = [
+          ["/whats-xdp", "whats-xdp", "What's XDP?"],
+          ["/living-with-xdp", "living-with-xdp", "Living with XDP"],
+          ["/help-desk", "help-desk", "Help Desk"],
+          ["/about-scf", "about-scf", "About SCF"],
+          ["/meet-the-patients", "meet-the-patients", "Meet the Patients"]
+        ];
+      each link in links
+        a.navigation-link(id=`link-${link[1]}` href=link[0] class={selected: link[1] == selectedId})= link[2]
+    a#btn-home(href="/")
+  if spacer
+    .navigation-spacer
+
+doctype html
+html
+  head
+    block head
+      title= title
+    block meta
+    block css
+      link(rel="stylesheet" type="text/css" href="/css/main.css")
+    block js
+      script(src="/js/jquery.js")
+  body
+    block navigation
+      +navigation
+    block body
+    block footer
+      .section#footer-wrapper
+        .center-wrapper
+          .left
+            .logo-wrapper
+            .text-wrapper
+              .logo-text Haligi
+              .subtitle Raising awareness on X-Linked Dystonia Parkinsonism Towards Metro Manila-based Patients and their Families
+              .credit This is the senior creative project by Gab Mesina, a graduating BGA Information Design student in  Ateneo de Manila University
+          .right
+            .item
+              .logo-wrapper.scf
+              .text-wrapper
+                .title Sunshine Care Foundation
+                .subtitle Abegail Aguil (+63) 0917 157 1342
+            .item
+              .logo-wrapper.fb
+              .text-wrapper
+                .title X-Linked Dystonia Parkinsonism - XDP Philippines
+      

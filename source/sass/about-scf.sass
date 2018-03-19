@@ -1,0 +1,36 @@
+#about-image-wrapper
+  height: 20em
+  display: flex
+  $r: 60%
+  .image-1, .image-2
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    flex-grow: 0
+    flex-shrink: 0
+  .image-1
+    width: $r
+    background-image: url(../img/about-1.jpg)
+  .image-2
+    width: 100% - $r
+    background-image: url(../img/about-2.jpg)
+
+#about-screen-1
+  .center-wrapper
+    padding-top: 2em
+    padding-bottom: 2em
+    display: flex
+    $r: 75%
+    .left, .right
+      flex-grow: 0
+      flex-shrink: 0
+    .left
+      flex-basis: $r
+      padding-right: 3em
+      .paragraph
+        margin-bottom: 1em
+    .right
+      flex-basis: 100% - $r
+      font-size: 0.9em
+      li
+        margin-bottom: 0.2em

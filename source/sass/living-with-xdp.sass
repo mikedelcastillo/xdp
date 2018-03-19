@@ -1,0 +1,97 @@
+#living-with-xdp-screen-1
+  display: flex
+  top: $header-height
+  height: 100%
+  width: 100%
+  left: 0
+  justify-content: space-around
+  align-items: center
+  padding-bottom: 30%
+  background: linear-gradient(to top, white, $color-blue)
+  .background
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-image: url(../img/land.png)
+    background-position: bottom center
+    background-size: 100%
+    background-repeat: no-repeat
+  a
+    background-color: $color-red
+    font-family: $font-grotesk
+    font-weight: 700
+    font-size: 1.7em
+    text-decoration: none
+    color: white
+    padding: 0.2em 1em
+
+#home-life-screen-1, #home-life-screen-5
+  padding-bottom: 2em
+  .center-wrapper
+    display: flex
+    .left
+      padding-right: 3em
+    .right
+      flex-basis: 20em
+      width: 20em
+      flex-grow: 0
+      flex-shrink: 0
+      text-align: center
+      padding-top: 5em
+      img
+        display: block
+        width: 100%
+
+#home-life-screen-2
+  background-color: #DEDDE2
+  padding-top: 2em
+  padding-bottom: 2em
+
+#home-life-screen-3, #home-life-screen-4
+  padding-top: 2em
+  padding-bottom: 2em
+  .center-wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .embed-wrapper
+      flex-grow: 1
+    .text-wrapper
+      flex-basis: 15em
+      width: 15em
+      flex-grow: 0
+      flex-shrink: 0
+      text-align: right
+      .button
+        font-size: 1em
+        font-weight: 500
+
+#home-life-screen-4
+  .center-wrapper
+    flex-direction: row-reverse
+    .text-wrapper
+      text-align: left
+
+#home-life-screen-5
+  padding-top: 2em
+  background-color: $color-yellow
+
+#work-life-screen-1
+  padding-bottom: 13em
+  background-image: url(../img/buildings.png)
+  background-position: center bottom
+  background-repeat: no-repeat
+  background-size: 30em auto
+  .center-wrapper
+    display: flex
+    .left, .right
+      flex-basis: 50%
+      width: 50%
+      flex-grow: 0
+      flex-shrink: 0
+    .left
+      padding-right: 1.5em
+    .right
+      padding-left: 1.5em
