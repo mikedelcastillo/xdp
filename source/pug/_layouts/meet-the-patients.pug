@@ -20,6 +20,10 @@ prepend body
       patients.push(patient);
     }
     
+    function getPatient(id){
+      return patients.find(patient => patient.id == id);
+    }
+    
     newPatient(
       "yiel",
       "Yiel",
@@ -56,3 +60,11 @@ prepend body
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     );
     
+  mixin displayPatient(patient)
+    .section#meet-the-patient-profile
+      .image-wrapper(style=`background-image:url(${patient.hover})`)
+      .text-wrapper
+        .center-wrapper
+          .big-text Meet #[span.name= patient.name]
+          .paragraph= patient.description
+          a.button.red(href="index.html") Meet the others

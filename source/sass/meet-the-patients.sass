@@ -57,3 +57,27 @@
       .paragraph
         width: 60%
         margin: auto
+
+#meet-the-patient-profile
+  display: flex
+  justify-content: space-between
+  align-items: center
+  .image-wrapper, .text-wrapper
+    width: 50%
+    flex-basis: 50%
+    flex-grow: 0
+    flex-shrink: 0
+  .image-wrapper
+    min-height: 40em
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+  .text-wrapper
+    padding: 3em
+    .big-text
+      font-size: 3em
+      .name
+        font-family: $font-salted-mocha
+        font-size: 2em
+      &, & *
+        vertical-align: baseline

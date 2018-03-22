@@ -87,36 +87,36 @@ body, html {
   .section .center-wrapper {
     max-width: 900px;
     margin: auto; }
-    .section .center-wrapper .big-text {
-      font-size: 2.5em;
-      font-family: "grotesk", sans-serif;
-      margin-bottom: 0.25em;
-      font-weight: 700; }
-    .section .center-wrapper .medium-text {
-      font-family: "grotesk", sans-serif;
-      font-weight: 500;
-      font-size: 1.5em;
+  .section .big-text {
+    font-size: 2.5em;
+    font-family: "grotesk", sans-serif;
+    margin-bottom: 0.25em;
+    font-weight: 700; }
+  .section .medium-text {
+    font-family: "grotesk", sans-serif;
+    font-weight: 500;
+    font-size: 1.5em;
+    margin-bottom: 0.5em; }
+  .section .paragraph {
+    line-height: 1.4em; }
+    .section .paragraph.padded {
+      padding-left: 2.7em;
+      padding-right: 2.7em; }
+  .section ul.dotted {
+    list-style: none;
+    padding-left: 0; }
+    .section ul.dotted li {
       margin-bottom: 0.5em; }
-    .section .center-wrapper .paragraph {
-      line-height: 1.4em; }
-      .section .center-wrapper .paragraph.padded {
-        padding-left: 2.7em;
-        padding-right: 2.7em; }
-    .section .center-wrapper ul.dotted {
-      list-style: none;
-      padding-left: 0; }
-      .section .center-wrapper ul.dotted li {
-        margin-bottom: 0.5em; }
-        .section .center-wrapper ul.dotted li::before {
-          content: " ";
-          display: inline-block;
-          height: 0.8em;
-          width: 0.8em;
-          border-radius: 50%;
-          background-color: #FDBE2F;
-          margin-right: 0.8em; }
-      .section .center-wrapper ul.dotted.red li::before {
-        background-color: #D00915; }
+      .section ul.dotted li::before {
+        content: " ";
+        display: inline-block;
+        height: 0.8em;
+        width: 0.8em;
+        border-radius: 50%;
+        background-color: #FDBE2F;
+        margin-right: 0.8em; }
+    .section ul.dotted.red li::before {
+      background-color: #D00915; }
   .section.center {
     text-align: center; }
     .section.center .center-wrapper {
@@ -490,5 +490,29 @@ body, html {
     #meet-the-patients-screen-1 .center-wrapper .bottom-text-wrapper .paragraph {
       width: 60%;
       margin: auto; }
+
+#meet-the-patient-profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  #meet-the-patient-profile .image-wrapper, #meet-the-patient-profile .text-wrapper {
+    width: 50%;
+    flex-basis: 50%;
+    flex-grow: 0;
+    flex-shrink: 0; }
+  #meet-the-patient-profile .image-wrapper {
+    min-height: 40em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; }
+  #meet-the-patient-profile .text-wrapper {
+    padding: 3em; }
+    #meet-the-patient-profile .text-wrapper .big-text {
+      font-size: 3em; }
+      #meet-the-patient-profile .text-wrapper .big-text .name {
+        font-family: "salted-mocha", sans-serif;
+        font-size: 2em; }
+      #meet-the-patient-profile .text-wrapper .big-text, #meet-the-patient-profile .text-wrapper .big-text * {
+        vertical-align: baseline; }
 
 /*# sourceMappingURL=main.css.map */
