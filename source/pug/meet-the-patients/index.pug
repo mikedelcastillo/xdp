@@ -1,4 +1,16 @@
-extends ../_layouts/layout
+extends ../_layouts/meet-the-patients
 
-block navigation
-  +navigation(null, "meet-the-patients")
+append body
+  .section#meet-the-patients-screen-1
+    .center-wrapper
+      .patients-wrapper
+        each patient in patients
+          a.patient(href=`/meet-the-patients/${patient.id}.html`)
+            .text-wrapper
+              .name= patient.name
+            .image-wrapper
+              .image.default(style=`background-image:url(${patient.default})`)
+              .image.hover(style=`background-image:url(${patient.hover})`)
+      .bottom-text-wrapper
+        .big-text and more
+        .paragraph Know someone with XDP? Submit your story to patients.haligi.ph and be featured on this page. Let these stories be heard to inspire and raise awareness about XDP.

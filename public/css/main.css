@@ -435,4 +435,60 @@ body, html {
     #about-screen-1 .center-wrapper .right li {
       margin-bottom: 0.2em; }
 
+#meet-the-patients-screen-1 {
+  padding-top: 3em;
+  padding-bottom: 5em; }
+  #meet-the-patients-screen-1 .center-wrapper .patients-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+    #meet-the-patients-screen-1 .center-wrapper .patients-wrapper .patient {
+      margin: 1em;
+      width: 15em;
+      height: 15em;
+      flex-basis: 15em;
+      border-radius: 50%;
+      background-color: #FDBE2F;
+      overflow: hidden; }
+      #meet-the-patients-screen-1 .center-wrapper .patients-wrapper .patient, #meet-the-patients-screen-1 .center-wrapper .patients-wrapper .patient * {
+        cursor: pointer; }
+      #meet-the-patients-screen-1 .center-wrapper .patients-wrapper .patient .text-wrapper {
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end; }
+        #meet-the-patients-screen-1 .center-wrapper .patients-wrapper .patient .text-wrapper .name {
+          color: white;
+          font-family: "salted-mocha", sans-serif;
+          font-size: 3.5em; }
+      #meet-the-patients-screen-1 .center-wrapper .patients-wrapper .patient .text-wrapper, #meet-the-patients-screen-1 .center-wrapper .patients-wrapper .patient .text-wrapper .image, #meet-the-patients-screen-1 .center-wrapper .patients-wrapper .patient .image-wrapper, #meet-the-patients-screen-1 .center-wrapper .patients-wrapper .patient .image-wrapper .image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; }
+      #meet-the-patients-screen-1 .center-wrapper .patients-wrapper .patient .image-wrapper {
+        width: 100%;
+        height: 100%; }
+        #meet-the-patients-screen-1 .center-wrapper .patients-wrapper .patient .image-wrapper .image {
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover; }
+          #meet-the-patients-screen-1 .center-wrapper .patients-wrapper .patient .image-wrapper .image.default {
+            z-index: 1;
+            transition: opacity 0.2s; }
+          #meet-the-patients-screen-1 .center-wrapper .patients-wrapper .patient .image-wrapper .image.hover {
+            z-index: 0; }
+      #meet-the-patients-screen-1 .center-wrapper .patients-wrapper .patient:hover .default {
+        opacity: 0; }
+  #meet-the-patients-screen-1 .center-wrapper .bottom-text-wrapper {
+    text-align: center;
+    margin-top: 2em; }
+    #meet-the-patients-screen-1 .center-wrapper .bottom-text-wrapper .big-text {
+      font-size: 4em;
+      margin: 0.2em; }
+    #meet-the-patients-screen-1 .center-wrapper .bottom-text-wrapper .paragraph {
+      width: 60%;
+      margin: auto; }
+
 /*# sourceMappingURL=main.css.map */
