@@ -11,7 +11,7 @@
   position: relative
   padding-top: 3em
   padding-bottom: 3em
-  $n: 6
+  $n: 5
   $size: 1em
   .line
     background-color: $color-red
@@ -20,30 +20,35 @@
     height: 0.3em
     width: 100% - 100% / $n
     left: 100% / $n / 2
-  .nodes
+  .numbers
     display: flex
     justify-content: space-between
-    .node
-      flex-grow: 0
-      flex-shrink: 0
+    flex-grow: 0
+    flex-shrink: 0
+    flex-basis: 100% / $n
+    text-align: center
+    padding: 1em
+    .number
+      margin: auto
+      font-size: 1.2em
+      font-family: $font-grotesk
+      font-weight: 500
+      background-color: $color-red
+      color: white
+      border-radius: 50%
+      width: 2em
+      height: 2em
+      justify-content: center
+      align-items: center
+      display: flex
+  $n: 6
+  .texts
+    display: flex
+    justify-content: space-between
+    padding: 0 15%
+    .text
       flex-basis: 100% / $n
       text-align: center
-      padding: 1em
-      .number
-        margin: auto
-        font-size: 1.2em
-        font-family: $font-grotesk
-        font-weight: 500
-        background-color: $color-red
-        color: white
-        border-radius: 50%
-        width: 2em
-        height: 2em
-        justify-content: center
-        align-items: center
-        display: flex
-      .text
-        margin-top: 1.5em
 
 #whats-xdp-screen-3
   background-color: $color-yellow

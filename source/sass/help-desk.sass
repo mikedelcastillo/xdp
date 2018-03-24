@@ -1,0 +1,96 @@
+#help-desk-screen-1
+  padding-top: 3em
+  .center-wrapper
+    display: flex
+    align-items: center
+    .left, .right
+      flex-grow: 0
+      flex-shrink: 0
+    $r: 55%
+    .left
+      flex-basis: $r
+      width: $r
+    .right
+      flex-basis: 100% - $r
+      width: 100% - $r
+      padding-left: 4em
+    .left
+      .big-text
+        margin-bottom: 0
+      .medium-text
+        font-size: 1.2em
+      .paragraph
+        margin-bottom: 1em
+      ul
+        color: $color-blue
+    .right
+      padding-bottom: 3em
+      .button.red
+        font-weight: 500
+        font-size: 1em
+      .image
+        margin-top: 4em
+        display: block
+        width: 100%
+
+#help-desk-screen-2
+  padding-bottom: 3em
+  padding-top: 2em
+  .center-wrapper
+    display: flex
+    align-items: stretch
+    .left, .right
+      flex-grow: 1
+      flex-shrink: 1
+      flex: 1
+      flex-basis: 50%
+      height: 100%
+      width: 50%
+    .left
+      display: flex
+      align-items: center
+      justify-content: center
+      height: 100%
+      .content-wrapper
+        z-index: 10
+        line-height: 1.5em
+        width: 100%
+        padding: 2em
+        background-color: $color-yellow
+        .thick
+          font-family: $font-grotesk
+          font-weight: 700
+        .white
+          color: white
+      .circle, .triangle
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: 0
+        position: absolute
+        background-repeat: no-repeat
+        background-position: 50%
+      .circle
+        background-image: url(../img/red-circle.png)
+        background-position: top left
+      .triangle
+        background-image: url(../img/blue-triangle.png)
+        background-position: bottom right
+
+    .right
+      padding-left: 5em
+      .page-navigation
+        text-align: center
+        padding-top: 1em
+        font-family: $font-grotesk
+        font-weight: 500
+        *
+          display: inline-block
+          margin: 0.2em
+
+      .neurologist
+        margin-top: 1em
+        .name
+          font-family: $font-grotesk
+          font-weight: 500

@@ -87,21 +87,6 @@ body, html {
   .section .center-wrapper {
     max-width: 900px;
     margin: auto; }
-  .section .big-text {
-    font-size: 2.5em;
-    font-family: "grotesk", sans-serif;
-    margin-bottom: 0.25em;
-    font-weight: 700; }
-  .section .medium-text {
-    font-family: "grotesk", sans-serif;
-    font-weight: 500;
-    font-size: 1.5em;
-    margin-bottom: 0.5em; }
-  .section .paragraph {
-    line-height: 1.4em; }
-    .section .paragraph.padded {
-      padding-left: 2.7em;
-      padding-right: 2.7em; }
   .section ul.dotted {
     list-style: none;
     padding-left: 0; }
@@ -110,19 +95,55 @@ body, html {
       .section ul.dotted li::before {
         content: " ";
         display: inline-block;
-        height: 0.8em;
-        width: 0.8em;
         border-radius: 50%;
         background-color: #FDBE2F;
-        margin-right: 0.8em; }
-    .section ul.dotted.red li::before {
+        margin-right: 0.8em;
+        vertical-align: middle; }
+    .section ul.dotted ul {
+      margin-top: 0.7em;
+      margin-left: 2em; }
+    .section ul.dotted.checks li::before {
+      width: 1.2em;
+      height: 1.2em;
+      background-image: url(../img/check.png);
+      background-repeat: no-repeat;
+      background-size: 60%;
+      background-position: center;
       background-color: #D00915; }
+    .section ul.dotted.red li::before {
+      background-color: #D00915;
+      background-image: none;
+      height: 0.8em;
+      width: 0.8em; }
+    .section ul.dotted.yellow li::before {
+      background-color: #FDBE2F;
+      background-image: none;
+      height: 0.8em;
+      width: 0.8em; }
   .section.center {
     text-align: center; }
     .section.center .center-wrapper {
       max-width: 30em; }
       .section.center .center-wrapper .paragraph {
         padding-top: 0.5em; }
+
+.big-text {
+  font-size: 2.5em;
+  font-family: "grotesk", sans-serif;
+  margin-bottom: 0.25em;
+  font-weight: 700; }
+
+.medium-text {
+  font-family: "grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 1.5em;
+  margin-bottom: 0.5em; }
+
+.paragraph {
+  line-height: 1.4em; }
+  .paragraph.padded {
+    padding-left: 2.7em;
+    padding-right: 2.7em; }
 
 .button, .btn-more {
   font-family: "grotesk", sans-serif;
@@ -133,7 +154,8 @@ body, html {
   display: inline-block;
   cursor: pointer;
   margin-top: 1em;
-  text-decoration: none; }
+  text-decoration: none;
+  text-align: center; }
   .button.blue, .blue.btn-more {
     background-color: #346CAF; }
   .button.yellow, .yellow.btn-more {
@@ -245,6 +267,7 @@ body, html {
       font-size: 2.5em; }
 
 #home-screen-5 {
+  background-color: #DEDDE2;
   padding-top: 4em;
   padding-bottom: 6em;
   background-image: url(../img/exer.png);
@@ -270,32 +293,36 @@ body, html {
     position: absolute;
     top: 2em;
     height: 0.3em;
-    width: 83.3333333333%;
-    left: 8.3333333333%; }
-  #whats-xdp-screen-2 .nodes {
+    width: 80%;
+    left: 10%; }
+  #whats-xdp-screen-2 .numbers {
     display: flex;
-    justify-content: space-between; }
-    #whats-xdp-screen-2 .nodes .node {
-      flex-grow: 0;
-      flex-shrink: 0;
+    justify-content: space-between;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 20%;
+    text-align: center;
+    padding: 1em; }
+    #whats-xdp-screen-2 .numbers .number {
+      margin: auto;
+      font-size: 1.2em;
+      font-family: "grotesk", sans-serif;
+      font-weight: 500;
+      background-color: #D00915;
+      color: white;
+      border-radius: 50%;
+      width: 2em;
+      height: 2em;
+      justify-content: center;
+      align-items: center;
+      display: flex; }
+  #whats-xdp-screen-2 .texts {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15%; }
+    #whats-xdp-screen-2 .texts .text {
       flex-basis: 16.6666666667%;
-      text-align: center;
-      padding: 1em; }
-      #whats-xdp-screen-2 .nodes .node .number {
-        margin: auto;
-        font-size: 1.2em;
-        font-family: "grotesk", sans-serif;
-        font-weight: 500;
-        background-color: #D00915;
-        color: white;
-        border-radius: 50%;
-        width: 2em;
-        height: 2em;
-        justify-content: center;
-        align-items: center;
-        display: flex; }
-      #whats-xdp-screen-2 .nodes .node .text {
-        margin-top: 1.5em; }
+      text-align: center; }
 
 #whats-xdp-screen-3 {
   background-color: #FDBE2F; }
@@ -303,6 +330,99 @@ body, html {
 #whats-xdp-screen-3, #whats-xdp-screen-5 {
   padding-top: 3em;
   padding-bottom: 3em; }
+
+#help-desk-screen-1 {
+  padding-top: 3em; }
+  #help-desk-screen-1 .center-wrapper {
+    display: flex;
+    align-items: center; }
+    #help-desk-screen-1 .center-wrapper .left, #help-desk-screen-1 .center-wrapper .right {
+      flex-grow: 0;
+      flex-shrink: 0; }
+    #help-desk-screen-1 .center-wrapper .left {
+      flex-basis: 55%;
+      width: 55%; }
+    #help-desk-screen-1 .center-wrapper .right {
+      flex-basis: 45%;
+      width: 45%;
+      padding-left: 4em; }
+    #help-desk-screen-1 .center-wrapper .left .big-text {
+      margin-bottom: 0; }
+    #help-desk-screen-1 .center-wrapper .left .medium-text {
+      font-size: 1.2em; }
+    #help-desk-screen-1 .center-wrapper .left .paragraph {
+      margin-bottom: 1em; }
+    #help-desk-screen-1 .center-wrapper .left ul {
+      color: #346CAF; }
+    #help-desk-screen-1 .center-wrapper .right {
+      padding-bottom: 3em; }
+      #help-desk-screen-1 .center-wrapper .right .button.red, #help-desk-screen-1 .center-wrapper .right .btn-more {
+        font-weight: 500;
+        font-size: 1em; }
+      #help-desk-screen-1 .center-wrapper .right .image {
+        margin-top: 4em;
+        display: block;
+        width: 100%; }
+
+#help-desk-screen-2 {
+  padding-bottom: 3em;
+  padding-top: 2em; }
+  #help-desk-screen-2 .center-wrapper {
+    display: flex;
+    align-items: stretch; }
+    #help-desk-screen-2 .center-wrapper .left, #help-desk-screen-2 .center-wrapper .right {
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex: 1;
+      flex-basis: 50%;
+      height: 100%;
+      width: 50%; }
+    #help-desk-screen-2 .center-wrapper .left {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%; }
+      #help-desk-screen-2 .center-wrapper .left .content-wrapper {
+        z-index: 10;
+        line-height: 1.5em;
+        width: 100%;
+        padding: 2em;
+        background-color: #FDBE2F; }
+        #help-desk-screen-2 .center-wrapper .left .content-wrapper .thick {
+          font-family: "grotesk", sans-serif;
+          font-weight: 700; }
+        #help-desk-screen-2 .center-wrapper .left .content-wrapper .white {
+          color: white; }
+      #help-desk-screen-2 .center-wrapper .left .circle, #help-desk-screen-2 .center-wrapper .left .triangle {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position: 50%; }
+      #help-desk-screen-2 .center-wrapper .left .circle {
+        background-image: url(../img/red-circle.png);
+        background-position: top left; }
+      #help-desk-screen-2 .center-wrapper .left .triangle {
+        background-image: url(../img/blue-triangle.png);
+        background-position: bottom right; }
+    #help-desk-screen-2 .center-wrapper .right {
+      padding-left: 5em; }
+      #help-desk-screen-2 .center-wrapper .right .page-navigation {
+        text-align: center;
+        padding-top: 1em;
+        font-family: "grotesk", sans-serif;
+        font-weight: 500; }
+        #help-desk-screen-2 .center-wrapper .right .page-navigation * {
+          display: inline-block;
+          margin: 0.2em; }
+      #help-desk-screen-2 .center-wrapper .right .neurologist {
+        margin-top: 1em; }
+        #help-desk-screen-2 .center-wrapper .right .neurologist .name {
+          font-family: "grotesk", sans-serif;
+          font-weight: 500; }
 
 #living-with-xdp-screen-1 {
   display: flex;
@@ -358,6 +478,8 @@ body, html {
 #home-life-screen-3, #home-life-screen-4 {
   padding-top: 2em;
   padding-bottom: 2em; }
+  #home-life-screen-3 ul, #home-life-screen-4 ul {
+    text-align: left; }
   #home-life-screen-3 .center-wrapper, #home-life-screen-4 .center-wrapper {
     display: flex;
     justify-content: space-between;
@@ -469,7 +591,10 @@ body, html {
         height: 100%; }
       #meet-the-patients-screen-1 .center-wrapper .patients-wrapper .patient .image-wrapper {
         width: 100%;
-        height: 100%; }
+        height: 100%;
+        overflow: auto; }
+        #meet-the-patients-screen-1 .center-wrapper .patients-wrapper .patient .image-wrapper, #meet-the-patients-screen-1 .center-wrapper .patients-wrapper .patient .image-wrapper .image {
+          border-radius: 50%; }
         #meet-the-patients-screen-1 .center-wrapper .patients-wrapper .patient .image-wrapper .image {
           background-position: center;
           background-repeat: no-repeat;
@@ -497,14 +622,14 @@ body, html {
   align-items: center; }
   #meet-the-patient-profile .image-wrapper, #meet-the-patient-profile .text-wrapper {
     width: 50%;
-    flex-basis: 50%;
-    flex-grow: 0;
-    flex-shrink: 0; }
+    flex-basis: 50%; }
   #meet-the-patient-profile .image-wrapper {
     min-height: 40em;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover; }
+    background-size: cover;
+    align-self: stretch;
+    height: 100%; }
   #meet-the-patient-profile .text-wrapper {
     padding: 3em; }
     #meet-the-patient-profile .text-wrapper .big-text {

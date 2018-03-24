@@ -76,36 +76,42 @@ body, html
   .center-wrapper
     max-width: 900px
     margin: auto
-  .big-text
-    font-size: 2.5em
-    font-family: $font-grotesk
-    margin-bottom: 0.25em
-    font-weight: 700
-  .medium-text
-    font-family: $font-grotesk
-    font-weight: 500
-    font-size: 1.5em
-    margin-bottom: 0.5em
-  .paragraph
-    line-height: 1.4em
-    &.padded
-      padding-left: 2.7em
-      padding-right: 2.7em
-  ul.dotted
-    list-style: none
-    padding-left: 0
-    li
-      margin-bottom: 0.5em
-      &::before
-        content: ' '
-        display: inline-block
+  ul
+    &.dotted
+      list-style: none
+      padding-left: 0
+      li
+        margin-bottom: 0.5em
+        &::before
+          content: ' '
+          display: inline-block
+          border-radius: 50%
+          background-color: $color-yellow
+          margin-right: 0.8em
+          vertical-align: middle
+      ul
+        margin-top: 0.7em
+        margin-left: 2em
+      &.checks
+        li
+          &::before
+            width: 1.2em
+            height: 1.2em
+            background-image: url(../img/check.png)
+            background-repeat: no-repeat
+            background-size: 60%
+            background-position: center
+            background-color: $color-red
+      &.red li::before
+        background-color: $color-red
+        background-image: none
         height: 0.8em
         width: 0.8em
-        border-radius: 50%
+      &.yellow li::before
         background-color: $color-yellow
-        margin-right: 0.8em
-    &.red li::before
-      background-color: $color-red
+        background-image: none
+        height: 0.8em
+        width: 0.8em
   &.center
     text-align: center
     .center-wrapper
@@ -113,6 +119,22 @@ body, html
       .big-text
       .paragraph
         padding-top: 0.5em
+
+.big-text
+  font-size: 2.5em
+  font-family: $font-grotesk
+  margin-bottom: 0.25em
+  font-weight: 700
+.medium-text
+  font-family: $font-grotesk
+  font-weight: 500
+  font-size: 1.5em
+  margin-bottom: 0.5em
+.paragraph
+  line-height: 1.4em
+  &.padded
+    padding-left: 2.7em
+    padding-right: 2.7em
 
 .button
   font-family: $font-grotesk
@@ -124,6 +146,7 @@ body, html
   cursor: pointer
   margin-top: 1em
   text-decoration: none
+  text-align: center
   &.blue
     background-color: $color-blue
   &.yellow
@@ -198,6 +221,7 @@ body, html
 
 @import home
 @import whats-xdp
+@import help-desk
 @import living-with-xdp
 @import about-scf
 @import meet-the-patients
