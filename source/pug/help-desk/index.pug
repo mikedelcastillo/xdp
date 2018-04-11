@@ -12,60 +12,37 @@ block body
         .paragraph Ang Individual Medical Assistance Program o IMAP ay programa ng Philippine Charity Sweepstakes Office (PCSO) na ang layunin ay magbigay ng serbisyong medikal sa taong tumatapat sa mga kwalipikasyon. Maaaring kumuha ang mga pasyenteng may XDP at mabigyan ng libreng pagamot (madalas sa paraan ng botox injections) kapag nakumpleto na nila ang mga hakbang at kinakailangan para sa IMAP.
         .medium-text Requirements
         ul.dotted.checks
+          li Accomplished IMAP Application Form
+          li 2 Valid IDs
+            ul.dotted.red-line
+              li PWD ID Card
+              li SSS
+              li GSIS
+              li PAG-IBIG
+              li Driver's License
+              li Senior Citizen's ID
+              li Passport
           li Medical Abstract
           li Barangay Indigency
-          li Social Cast Study
-          li Personal Letter Addressed to the General Manage
-          li Quotation of Medical Expenses
-          li 2 Valid IDs
-            ul.dotted.yellow
-              li PWD Card
-              li Another one
-                ul.dotted.yellow
-                  li what is this
-              li GSIS
-                ul.dotted.yellow
-                  li How to apply go here
-                  li Benefits go here
+          li Social Case Study
+          li Quotation of Botox
+          li Personal letter addressed to the General Manager
       .right
-        .button.red Download checklist of requirements here
+        a.button.red(href="/download/HALIGI IMAP Checklist (web).pdf" target="_blank") Download checklist of requirements here
         img.image(src="/img/help-desk.png")
   .section#help-desk-screen-2
     .center-wrapper
       .left
         .circle
         .triangle
-        .content-wrapper
-          .white.thick Neurologists
-          .regular.white Manila
-          .regular Makati
-          .regular Laguna
-          .regular Quezon City
-          .regular Pasig
-          .regular Las Pinas
-          .regular Paranaque
-          .regular Muntinlupa
-          .thick Movement Disorder Specialist Psychiatrists
+        .content-wrapper#categories-wrapper
+          
       .right
         .big-text Neurologists
-        .neurologists
-          .page.page-1
-            .neurologist
-              .name Aida M. Salonga
-              .address Rm. 502 MAB St. Luke's Medical Center, Quezon City
-            .neurologist
-              .name Aida M. Salonga
-              .address Rm. 502 MAB St. Luke's Medical Center, Quezon City
-            .neurologist
-              .name Aida M. Salonga
-              .address Rm. 502 MAB St. Luke's Medical Center, Quezon City
-            .neurologist
-              .name Aida M. Salonga
-              .address Rm. 502 MAB St. Luke's Medical Center, Quezon City
-            .neurologist
-              .name Aida M. Salonga
-              .address Rm. 502 MAB St. Luke's Medical Center, Quezon City
-        .page-navigation
-          .btn-left &lt;
-          .page 1
-          .btn-right &gt;
+        .items#items-wrapper
+        //- .page-navigation
+        //-   .btn-left &lt;
+        //-   .page 1
+        //-   .btn-right &gt;
+  script(src="/js/jquery.js")  
+  script(src="/js/help-desk.js")

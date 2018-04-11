@@ -7,16 +7,17 @@ prepend body
   -
     let patients = [];
     
-    function newPatient(id, name, description){
+    function newPatient(id, name, description, fake = false){
       let patient = {
         id, name, description,
-        default: 
-        `/img/patients/test.jpg`,
-        // `/img/patients/${id}.jpg`,
-        hover: 
-        `/img/patients/test-hover.jpg`
-        // `/img/patients/${id}-hover.jpg`
+        default: `/img/patients/${id}.jpg`,
+        hover: `/img/patients/${id}-hover.jpg`,
+        fake
       };
+      if(fake){
+        patient.default = `/img/patients/placeholder.jpg`,
+        patient.hover = `/img/patients/placeholder-hover.jpg`
+      }
       patients.push(patient);
     }
     
@@ -25,40 +26,46 @@ prepend body
     }
     
     newPatient(
-      "yiel",
-      "Yiel",
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      "aj",
+      "AJ",
+      "Hi, my name is Ayrel Jay O. Marinduque. I was born in Tagaytay. Like my older brother, Nelord, my childhood was never at its best since I was a product of a broken family. I was not able to go to college. However, my determination and hard work paid off when I was promoted as supervisor of one of the leading grocery stores in our country. A couple of years after, I decided to work abroad. At the age of 26, I was young and healthy until I felt something strange happening to my eyes during my second contract. I was unusually blinking a lot I often had to use my hands to open my eyes just to see normally. My company had to send me back to the Philippines after being diagnosed with blespharopasm. A few days after I got back, my condition worsened and I was diagnosed with cervical dystonia which later turned out to be the beginnings of my journey with XDP. It was only after then that it was made clear to me that I was afflicted with this disorder because of my mother’s Visayan ancestry."
     );
     
     newPatient(
       "nelord",
       "Nelord",
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      "So here is how my story line goes. I was a product of a broken family since I was 3 years old. I grew up with my grandparents with a promise to send me to school but only until high school and so they did. During those days, we didn’t have enough in terms of finances but I was filled with love by my grandparents. After high school, I stopped studying for a year. The next year, I applied for a scholarship and a job at the same time and luckily I got both. My college days were a bit tougher than the normal student who only goes to school, as I had to be in school in morning and at my job until late at night. During the weekend, I had to work two jobs as I needed to render 8 hours of duty for my scholarship and work again at night. But everything went smoothly as I managed to finish my degree as Cum Laude. Two months after I graduated, I got married but it ended up as a failed marriage but not as a failed parenthood to both of us. We were both okay. My ex-wife and I still talk and see other once in awhile. As a matter of fact, I considered her as one of my best friends ever. However, I don’t know if she feels the same way...hehehe kidding aside, I know I am. With my credentials, I’ve always gotten the job that I wanted. I’d only want what’s best for my son, Gyles Gabriel. Now everything is falling apart as I was stricken by this neurological disorder (XDP) which has disabled me for the past 3 years. Now all I need is your prayers..baka pag mas marami mas mabilis niyang marinig. Thank you and God bless."
+    );
+    
+    newPatient(
+      "gabion",
+      "Gabion",
+      false,
+      false
     );
     
     newPatient(
       "sam",
       "Sam",
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      false,
+      true
     );
     
     newPatient(
       "rey",
       "Rey",
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      false,
+      true
     );
     
     newPatient(
       "bernardo",
       "Bernardo",
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      false,
+      true
     );
     
-    newPatient(
-      "aj",
-      "AJ",
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    );
+    
     
   mixin displayPatient(patient)
     #meet-the-patient-profile

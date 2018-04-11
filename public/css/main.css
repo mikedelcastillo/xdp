@@ -120,6 +120,12 @@ body, html {
       background-image: none;
       height: 0.8em;
       width: 0.8em; }
+    .section ul.dotted.red-line li::before {
+      background-color: #D00915;
+      border-radius: 0;
+      background-image: none;
+      height: 0.2em;
+      width: 0.8em; }
   .section.center {
     text-align: center; }
     .section.center .center-wrapper {
@@ -169,7 +175,8 @@ body, html {
   #footer-wrapper .center-wrapper {
     display: flex;
     padding-top: 5em;
-    padding-bottom: 5em; }
+    padding-bottom: 5em;
+    font-size: 0.9em; }
     #footer-wrapper .center-wrapper .left, #footer-wrapper .center-wrapper .right {
       flex-grow: 0;
       flex-shrink: 0;
@@ -281,8 +288,12 @@ body, html {
     display: flex; }
     #whats-xdp-screen-1 .center-wrapper .left, #whats-xdp-screen-1 .center-wrapper .right {
       flex-basis: 50%; }
+    #whats-xdp-screen-1 .center-wrapper .left .medium-text {
+      margin-top: 2em; }
     #whats-xdp-screen-1 .center-wrapper .right {
       padding-left: 4em; }
+      #whats-xdp-screen-1 .center-wrapper .right img {
+        width: 100%; }
 
 #whats-xdp-screen-2 {
   position: relative;
@@ -327,7 +338,12 @@ body, html {
 #whats-xdp-screen-3 {
   background-color: #FDBE2F; }
 
-#whats-xdp-screen-3, #whats-xdp-screen-5 {
+#whats-xdp-screen-4 img {
+  display: block;
+  width: 100%;
+  height: auto; }
+
+#whats-xdp-screen-3, #whats-xdp-screen-4, #whats-xdp-screen-5 {
   padding-top: 3em;
   padding-bottom: 3em; }
 
@@ -382,17 +398,19 @@ body, html {
       align-items: center;
       justify-content: center;
       height: 100%; }
-      #help-desk-screen-2 .center-wrapper .left .content-wrapper {
+      #help-desk-screen-2 .center-wrapper .left .content-wrapper, #help-desk-screen-2 .center-wrapper .left #categories-wrapper {
         z-index: 10;
         line-height: 1.5em;
         width: 100%;
         padding: 2em;
         background-color: #FDBE2F; }
-        #help-desk-screen-2 .center-wrapper .left .content-wrapper .thick {
+        #help-desk-screen-2 .center-wrapper .left .content-wrapper .title, #help-desk-screen-2 .center-wrapper .left #categories-wrapper .title {
           font-family: "grotesk", sans-serif;
           font-weight: 700; }
-        #help-desk-screen-2 .center-wrapper .left .content-wrapper .white {
+        #help-desk-screen-2 .center-wrapper .left .content-wrapper .white, #help-desk-screen-2 .center-wrapper .left .content-wrapper .selected, #help-desk-screen-2 .center-wrapper .left #categories-wrapper .white, #help-desk-screen-2 .center-wrapper .left #categories-wrapper .selected {
           color: white; }
+        #help-desk-screen-2 .center-wrapper .left .content-wrapper *, #help-desk-screen-2 .center-wrapper .left #categories-wrapper * {
+          cursor: pointer; }
       #help-desk-screen-2 .center-wrapper .left .circle, #help-desk-screen-2 .center-wrapper .left .triangle {
         top: 0;
         left: 0;
@@ -418,11 +436,15 @@ body, html {
         #help-desk-screen-2 .center-wrapper .right .page-navigation * {
           display: inline-block;
           margin: 0.2em; }
-      #help-desk-screen-2 .center-wrapper .right .neurologist {
+      #help-desk-screen-2 .center-wrapper .right .item {
         margin-top: 1em; }
-        #help-desk-screen-2 .center-wrapper .right .neurologist .name {
+        #help-desk-screen-2 .center-wrapper .right .item .name {
           font-family: "grotesk", sans-serif;
           font-weight: 500; }
+        #help-desk-screen-2 .center-wrapper .right .item .details {
+          font-size: 0.9em; }
+          #help-desk-screen-2 .center-wrapper .right .item .details div {
+            margin-top: 0.5em; }
 
 #living-with-xdp-screen-1 {
   display: flex;
@@ -452,6 +474,9 @@ body, html {
     text-decoration: none;
     color: white;
     padding: 0.2em 1em; }
+
+#home-life-screen-1 .center-wrapper {
+  align-items: center; }
 
 #home-life-screen-1, #home-life-screen-5 {
   padding-bottom: 2em; }
@@ -485,7 +510,15 @@ body, html {
     justify-content: space-between;
     align-items: center; }
     #home-life-screen-3 .center-wrapper .embed-wrapper, #home-life-screen-4 .center-wrapper .embed-wrapper {
-      flex-grow: 1; }
+      flex-grow: 1;
+      padding-bottom: 56.25%; }
+      #home-life-screen-3 .center-wrapper .embed-wrapper iframe, #home-life-screen-4 .center-wrapper .embed-wrapper iframe {
+        position: absolute;
+        border: 0;
+        top: 5%;
+        left: 5%;
+        width: 90%;
+        height: 90%; }
     #home-life-screen-3 .center-wrapper .text-wrapper, #home-life-screen-4 .center-wrapper .text-wrapper {
       flex-basis: 15em;
       width: 15em;
@@ -624,7 +657,7 @@ body, html {
     width: 50%;
     flex-basis: 50%; }
   #meet-the-patient-profile .image-wrapper {
-    min-height: 40em;
+    min-height: 50em;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

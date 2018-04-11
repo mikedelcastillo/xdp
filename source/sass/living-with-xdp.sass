@@ -27,6 +27,10 @@
     color: white
     padding: 0.2em 1em
 
+#home-life-screen-1
+  .center-wrapper
+    align-items: center
+
 #home-life-screen-1, #home-life-screen-5
   padding-bottom: 2em
   .center-wrapper
@@ -60,6 +64,15 @@
     align-items: center
     .embed-wrapper
       flex-grow: 1
+      padding-bottom: 56.25%
+      iframe
+        position: absolute
+        border: 0
+        $p: 5%
+        top: $p
+        left: $p
+        width: #{100% - $p * 2}
+        height: #{100% - $p * 2}
     .text-wrapper
       flex-basis: 15em
       width: 15em

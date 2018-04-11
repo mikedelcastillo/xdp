@@ -5,7 +5,7 @@ append body
     .center-wrapper
       .patients-wrapper
         each patient in patients
-          a.patient(href=`/meet-the-patients/${patient.id}.html`)
+          a.patient(href=(!patient.description ? "#" : `/meet-the-patients/${patient.id}.html`))
             .text-wrapper
               .name= patient.name
             .image-wrapper

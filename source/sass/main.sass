@@ -112,6 +112,14 @@ body, html
         background-image: none
         height: 0.8em
         width: 0.8em
+      &.red-line
+        li
+          &::before
+            background-color: $color-red
+            border-radius: 0
+            background-image: none
+            height: 0.2em
+            width: 0.8em
   &.center
     text-align: center
     .center-wrapper
@@ -165,6 +173,7 @@ body, html
     display: flex
     padding-top: 5em
     padding-bottom: 5em
+    font-size: 0.9em
     .left, .right
       flex-grow: 0
       flex-shrink: 0

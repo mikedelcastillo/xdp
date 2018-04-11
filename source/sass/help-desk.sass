@@ -51,17 +51,19 @@
       align-items: center
       justify-content: center
       height: 100%
-      .content-wrapper
+      .content-wrapper, #categories-wrapper
         z-index: 10
         line-height: 1.5em
         width: 100%
         padding: 2em
         background-color: $color-yellow
-        .thick
+        .title
           font-family: $font-grotesk
           font-weight: 700
-        .white
+        .white, .selected
           color: white
+        *
+          cursor: pointer
       .circle, .triangle
         top: 0
         left: 0
@@ -89,8 +91,12 @@
           display: inline-block
           margin: 0.2em
 
-      .neurologist
+      .item
         margin-top: 1em
         .name
           font-family: $font-grotesk
           font-weight: 500
+        .details
+          font-size: 0.9em
+          div
+            margin-top: 0.5em
